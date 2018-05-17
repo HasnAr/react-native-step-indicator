@@ -196,7 +196,6 @@ export default class StepIndicator extends PureComponent {
             borderColor:this.customStyles.stepStrokeCurrentColor,
             height:this.sizeAnim,
             width:this.sizeAnim,
-            borderRadius:this.borderRadiusAnim
           };
           indicatorLabelStyle = { fontSize: this.customStyles.currentStepIndicatorLabelFontSize, color: this.customStyles.stepIndicatorLabelCurrentColor };
 
@@ -209,7 +208,6 @@ export default class StepIndicator extends PureComponent {
             borderColor:this.customStyles.stepStrokeFinishedColor,
             height:this.customStyles.stepIndicatorSize,
             width:this.customStyles.stepIndicatorSize,
-            borderRadius:(this.customStyles.stepIndicatorSize) / 2
           };
           indicatorLabelStyle = { fontSize: this.customStyles.stepIndicatorLabelFontSize, color: this.customStyles.stepIndicatorLabelFinishedColor };
           break;
@@ -222,7 +220,6 @@ export default class StepIndicator extends PureComponent {
             borderColor:this.customStyles.stepStrokeUnFinishedColor,
             height:this.customStyles.stepIndicatorSize,
             width:this.customStyles.stepIndicatorSize,
-            borderRadius:(this.customStyles.stepIndicatorSize) / 2
           };
           indicatorLabelStyle = {overflow: 'hidden', fontSize: this.customStyles.stepIndicatorLabelFontSize, color: this.customStyles.stepIndicatorLabelUnFinishedColor };
           break;
@@ -236,7 +233,7 @@ export default class StepIndicator extends PureComponent {
             renderStepIndicator ? renderStepIndicator({
           position,
           stepStatus: this.getStepStatus(position),
-        }) : <Text style={indicatorLabelStyle}>{ position + 1 }</Text>}
+        }) : <Text style={indicatorLabelStyle}>{}</Text>}
         </Animated.View>
       );
     }
